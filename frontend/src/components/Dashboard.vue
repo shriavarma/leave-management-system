@@ -58,7 +58,7 @@ const leaves = ref([]);
 const token = localStorage.getItem("token");
 
 const applyLeave = async () => {
-  const res = await fetch("http://localhost:5000/api/leave/apply", {
+  const res = await fetch("https://leave-management-system-2-p1md.onrender.com/api/leave/apply", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const applyLeave = async () => {
 };
 
 const fetchLeaves = async () => {
-  const res = await fetch("http://localhost:5000/api/leave/my", {
+  const res = await fetch("https://leave-management-system-2-p1md.onrender.com/api/leave/my", {
     headers: {
       Authorization: "Bearer " + token,
     },

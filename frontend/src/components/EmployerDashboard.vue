@@ -55,7 +55,7 @@ const leaves = ref([]);
 const token = localStorage.getItem("token");
 
 const fetchLeaves = async () => {
-  const res = await fetch("http://localhost:5000/api/leave/all", {
+  const res = await fetch("https://leave-management-system-2-p1md.onrender.com/api/leave/all", {
     headers: {
       Authorization: "Bearer " + token,
     },
@@ -68,7 +68,7 @@ const fetchLeaves = async () => {
 const updateStatus = async (id, status) => {
   console.log("Clicked:", id, status);
 
-  const res = await fetch(`http://localhost:5000/api/leave/${id}`, {
+  const res = await fetch(`https://leave-management-system-2-p1md.onrender.com/api/leave/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
